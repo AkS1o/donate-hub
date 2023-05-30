@@ -1,6 +1,8 @@
+import Router from './routes';
+
 function App() {
   return (
-    <h1>donatehub</h1>
+    <Router />
   );
 }
 
