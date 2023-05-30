@@ -3,6 +3,9 @@ import MuiDrawer, { DrawerProps as MuiDrawerProps } from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
 
 import DrawerHeader from '../DrawerHeader';
+import Nav from './Nav';
+
+import { generalList, profileList } from './config';
 
 const openedMixin = (theme: Theme, drawerWidth: number): CSSObject => ({
     width: drawerWidth,
@@ -60,6 +63,8 @@ const Drawer = (props: Props) => {
         <DrawerStyled variant="permanent" open={open} drawerWidth={drawerWidth}>
             <DrawerHeader />
             <Divider />
+
+            <Nav lists={[generalList, profileList]} open={open}/>
         </DrawerStyled>
     )
 }
